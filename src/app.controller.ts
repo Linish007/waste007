@@ -1,12 +1,28 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get} from '@nestjs/common';
+import { request } from 'http';
 import { AppService } from './app.service';
-
-@Controller()
+export interface CreateCatDto {
+  name: string;
+  age: [];
+  breed: string;
+}
+@Controller('users')
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @Get('yo')
+  getHello(@Body() createCatDto: CreateCatDto ): object {
+    const {name, age, breed}  = createCatDto
+    console.log('====================================');
+    console.log(name, age, breed);
+    console.log('====================================');
+    const hello = this.appService.getHello();
+    return {hello:'wroig add'}
+   
+    
   }
+
+
 }
+
+
