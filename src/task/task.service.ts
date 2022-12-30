@@ -14,7 +14,7 @@ export class TaskService {
 
   findOne(id: number) {
     // return `This action returns a #${id} task`;
-    return {id: 1, title: 'view movies after lunch', creationDate: ( new Date()), endDate: ( new Date()) };
+    return  {id: 1, title: 'view movies after lunch', creationDate: (new Date()).toISOString(), endDate: (new Date()).toISOString() };
   }
 
   update(id: number, updateTaskInput: UpdateTaskInput) {

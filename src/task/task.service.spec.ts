@@ -3,6 +3,7 @@ import { TaskService } from './task.service';
 
 describe('TaskService', () => {
   let service: TaskService;
+  let id:number;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
@@ -15,4 +16,11 @@ describe('TaskService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
   });
+  it('should contain a method findOne', ()=>{
+    
+    const findOne = service.findOne(id)
+    expect(findOne).toBeDefined()
+    // expect(findOne).toBe()
+
+  })
 });
