@@ -5,7 +5,7 @@ export class CreateTaskInput {
 
   @Field(() => Int, { description: 'Example field (placeholder)' })
   // exampleField: number;
-  @Field(() => Int)
+    @Field(() => Int)
     id: number;
 
     @Field(() => String)
