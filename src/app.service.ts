@@ -8,7 +8,7 @@ export class AppService {
   }
   
   getHello2 = () => {
-    
+  //  Do stuff here
   }
 
 }
