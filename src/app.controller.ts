@@ -13,6 +13,9 @@ export class AppController {
   @Get('yo')
   getHello(@Body() createCatDto: CreateCatDto ): object {
     const {name, age, breed}  = createCatDto
+    console.log('====================================');
+    console.log(name, age, breed);
+    console.log('====================================');
     const hello = this.appService.getHello();
     return {hello:'wroig add'}
    
